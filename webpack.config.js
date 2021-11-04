@@ -1,6 +1,7 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const NodePolyfillPlugin = require("node-polyfill-webpack-plugin")
 
 module.exports = {
   mode: process.env.NODE_ENV,
@@ -15,6 +16,9 @@ module.exports = {
         test: /\.(ts|tsx)$/,
         exclude: /node_modules/,
         resolve: {
+          fallback:{ 
+            "path": require.resolve("path-browserify"),
+          },
           extensions: ['.ts', '.tsx', '.js', '.json'],
         },
         use: 'ts-loader',
@@ -34,5 +38,6 @@ module.exports = {
       template: './public/index.html',
     }),
     new MiniCssExtractPlugin(),
+    new NodePolyfillPlugin(),
   ],
 };

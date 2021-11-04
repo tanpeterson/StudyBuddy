@@ -19,6 +19,11 @@ import { FC, useState } from "react";
 
   return(
   <div>
+    <div>
+      <select id="Decks">
+        <option></option>
+      </select>
+    </div>
     <div className='front'>
       <p>Front</p>
       <input className='front' value={front} onChange={ e => setFront(e.target.value) }/>

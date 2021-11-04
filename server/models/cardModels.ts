@@ -1,6 +1,5 @@
-require('dontenv').config();
+require('dotenv').config();
 const mongoose = require('mongoose');
-
 const MONGO_URI = process.env.MONGO_DB_URI;
 
 mongoose.connect(MONGO_URI, {
@@ -16,8 +15,18 @@ const Schema = mongoose.Schema;
 const cardSchema = new Schema({
   front: String,
   back: String,
+});
+
+const deckSchema = new Schema({
+  name: String,
+  cards: [{
+    type: Schema.Types.ObjectId,
+    ref: 'card',
+    required: false,
+  }]
 })
 
-const Card = mongoose.model('card', cardSchema);
+const Card = mongoose.model('card', cardSchema, 'card');
+const Deck = mongoose.model('deck', deckSchema, 'deck')
 
-module.exports = { Card }
+module.exports = { Card, Deck }

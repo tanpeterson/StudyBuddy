@@ -1,14 +1,15 @@
 import './styles/App.css';
 // import Card from './Card';
 import React from 'react'
-import Navigation from './Navigation';
+// import Navigation from './Navigation';
 import Main from './Main';
+// import 
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-      <Navigation />
+      {/* <Navigation /> */}
       <Main />
       </header>
     </div>

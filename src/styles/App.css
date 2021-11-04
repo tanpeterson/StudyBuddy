@@ -16,3 +16,72 @@ ul {
   justify-content: space-around;
   background-color: lightblue;
 }
+
+button {
+  padding: 5px 10px;
+  border: none;
+  margin: 0 10px 0 0;
+}
+
+.ThisContainer{
+  display: flex;
+}
+
+.CardContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bankP {
+  margin: 0;
+}
+pre {
+  font-size: 20px;
+  margin-left: 250px;
+}
+
+.addCards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.inputBox {
+  display: flex;
+  flex-direction: column;
+  max-width: 200px;
+}
+
+.wordBank{
+  position: sticky;
+  top: 0;
+  padding: 5px;
+  background-color: #cae8ca;
+  border: 2px solid #4CAF50;
+  /* background-color: tomato; */
+  max-width: 200px;
+  max-height: 120px;
+  /* position:absolute; */
+  left: 85%;
+
+  right: 0;
+}
+
+.FlashCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  /* max-width: 500px; */
+  min-width: 400px;
+  min-height: 150px;
+  margin: 30px 0 0 0;
+  border: 1px solid grey;
+  border-radius: 8px;
+  background-color: violet;
+}
+
+.ButtonContainer {
+  display: flex;
+}
